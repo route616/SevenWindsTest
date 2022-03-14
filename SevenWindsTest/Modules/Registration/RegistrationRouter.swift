@@ -7,12 +7,6 @@
 
 import Foundation
 
-final class RegistrationRouter: Routable {
-    static func start() -> Routable {
-        let router = RegistrationRouter()
-
-        return router
-    }
-
+final class RegistrationRouter {
     
 }

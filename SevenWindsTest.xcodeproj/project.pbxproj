@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7808B28127DD16CB00F58AE1 /* ResponseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B28027DD16CB00F58AE1 /* ResponseDecoder.swift */; };
+		7808B28427DD683400F58AE1 /* AuthorizationEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B28327DD683400F58AE1 /* AuthorizationEndpoint.swift */; };
+		7808B28627DD767900F58AE1 /* AuthorizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B28527DD767900F58AE1 /* AuthorizationAPI.swift */; };
+		7808B28927DD780B00F58AE1 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B28827DD780B00F58AE1 /* Token.swift */; };
+		7808B28B27DD7C5500F58AE1 /* Coffeehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B28A27DD7C5500F58AE1 /* Coffeehouse.swift */; };
+		7808B28D27DD80FE00F58AE1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B28C27DD80FE00F58AE1 /* Product.swift */; };
+		7808B29027DD81F900F58AE1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7808B28F27DD81F900F58AE1 /* Kingfisher */; };
+		7808B29427DD847200F58AE1 /* LocationsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B29327DD847200F58AE1 /* LocationsAPI.swift */; };
+		7808B29727DD84B500F58AE1 /* LocationsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B29627DD84B500F58AE1 /* LocationsEndpoint.swift */; };
+		7808B29927DD98D100F58AE1 /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B29827DD98D100F58AE1 /* MainButton.swift */; };
+		7808B29D27DD9CCD00F58AE1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7808B29C27DD9CCD00F58AE1 /* Colors.xcassets */; };
+		7808B29F27DD9F7100F58AE1 /* MainTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B29E27DD9F7100F58AE1 /* MainTextField.swift */; };
+		7808B2A327DE154700F58AE1 /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = 7808B2A227DE154700F58AE1 /* Rswift */; };
+		7808B2A527DE16BC00F58AE1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B2A427DE16BC00F58AE1 /* R.generated.swift */; };
+		7808B2A927DE21B600F58AE1 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B2A827DE21B600F58AE1 /* UIStackView+Extensions.swift */; };
+		7808B2B427DEADEF00F58AE1 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B2B327DEADEF00F58AE1 /* BaseViewController.swift */; };
+		7808B2B627DEB9E600F58AE1 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B2B527DEB9E600F58AE1 /* UIView+Extensions.swift */; };
+		7808B2B827DECBF400F58AE1 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808B2B727DECBF300F58AE1 /* UITextField+Extensions.swift */; };
+		7808B2BC27DECE0500F58AE1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7808B2BB27DECE0500F58AE1 /* IQKeyboardManagerSwift */; };
 		78647C9827D023820038BE42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78647C9727D023820038BE42 /* AppDelegate.swift */; };
 		78647C9A27D023820038BE42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78647C9927D023820038BE42 /* SceneDelegate.swift */; };
 		78647CA127D023860038BE42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78647CA027D023860038BE42 /* Assets.xcassets */; };
@@ -21,7 +40,6 @@
 		78B5005827D55EA7002A25A9 /* RegistrationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5005727D55EA7002A25A9 /* RegistrationInteractor.swift */; };
 		78B5005F27D56215002A25A9 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 78B5005E27D56215002A25A9 /* SnapKit */; };
 		78B5006227D57811002A25A9 /* RegistrationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006127D57811002A25A9 /* RegistrationPresenter.swift */; };
-		78B5006427D620E1002A25A9 /* VIPERProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006327D620E1002A25A9 /* VIPERProtocols.swift */; };
 		78B5006627D63661002A25A9 /* AuthorizationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006527D63661002A25A9 /* AuthorizationRouter.swift */; };
 		78B5006927D637EE002A25A9 /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006827D637EE002A25A9 /* AuthorizationInteractor.swift */; };
 		78B5006B27D637FD002A25A9 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006A27D637FD002A25A9 /* AuthorizationPresenter.swift */; };
@@ -30,6 +48,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7808B28027DD16CB00F58AE1 /* ResponseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDecoder.swift; sourceTree = "<group>"; };
+		7808B28327DD683400F58AE1 /* AuthorizationEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationEndpoint.swift; sourceTree = "<group>"; };
+		7808B28527DD767900F58AE1 /* AuthorizationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAPI.swift; sourceTree = "<group>"; };
+		7808B28827DD780B00F58AE1 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		7808B28A27DD7C5500F58AE1 /* Coffeehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffeehouse.swift; sourceTree = "<group>"; };
+		7808B28C27DD80FE00F58AE1 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		7808B29327DD847200F58AE1 /* LocationsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsAPI.swift; sourceTree = "<group>"; };
+		7808B29627DD84B500F58AE1 /* LocationsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsEndpoint.swift; sourceTree = "<group>"; };
+		7808B29827DD98D100F58AE1 /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		7808B29C27DD9CCD00F58AE1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7808B29E27DD9F7100F58AE1 /* MainTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTextField.swift; sourceTree = "<group>"; };
+		7808B2A427DE16BC00F58AE1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		7808B2A827DE21B600F58AE1 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		7808B2B327DEADEF00F58AE1 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		7808B2B527DEB9E600F58AE1 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		7808B2B727DECBF300F58AE1 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		78647C9427D023820038BE42 /* SevenWindsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenWindsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78647C9727D023820038BE42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78647C9927D023820038BE42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +79,6 @@
 		78B5005427D55E77002A25A9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		78B5005727D55EA7002A25A9 /* RegistrationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInteractor.swift; sourceTree = "<group>"; };
 		78B5006127D57811002A25A9 /* RegistrationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresenter.swift; sourceTree = "<group>"; };
-		78B5006327D620E1002A25A9 /* VIPERProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERProtocols.swift; sourceTree = "<group>"; };
 		78B5006527D63661002A25A9 /* AuthorizationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRouter.swift; sourceTree = "<group>"; };
 		78B5006827D637EE002A25A9 /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
 		78B5006A27D637FD002A25A9 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
@@ -58,6 +91,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7808B2A327DE154700F58AE1 /* Rswift in Frameworks */,
+				7808B2BC27DECE0500F58AE1 /* IQKeyboardManagerSwift in Frameworks */,
+				7808B29027DD81F900F58AE1 /* Kingfisher in Frameworks */,
 				78B5005F27D56215002A25A9 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,9 +101,76 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7808B28227DD681200F58AE1 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				7808B29227DD841C00F58AE1 /* Authorization */,
+				7808B29527DD84A100F58AE1 /* Locations */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		7808B28727DD77D400F58AE1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7808B28827DD780B00F58AE1 /* Token.swift */,
+				7808B28A27DD7C5500F58AE1 /* Coffeehouse.swift */,
+				7808B28C27DD80FE00F58AE1 /* Product.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		7808B29227DD841C00F58AE1 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				7808B28527DD767900F58AE1 /* AuthorizationAPI.swift */,
+				7808B28327DD683400F58AE1 /* AuthorizationEndpoint.swift */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		7808B29527DD84A100F58AE1 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				7808B29327DD847200F58AE1 /* LocationsAPI.swift */,
+				7808B29627DD84B500F58AE1 /* LocationsEndpoint.swift */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		7808B29A27DD98D800F58AE1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7808B29827DD98D100F58AE1 /* MainButton.swift */,
+				7808B29E27DD9F7100F58AE1 /* MainTextField.swift */,
+				7808B2B327DEADEF00F58AE1 /* BaseViewController.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		7808B29B27DD9C9800F58AE1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				78647CA027D023860038BE42 /* Assets.xcassets */,
+				7808B29C27DD9CCD00F58AE1 /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7808B2A727DE219300F58AE1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7808B2A827DE21B600F58AE1 /* UIStackView+Extensions.swift */,
+				7808B2B527DEB9E600F58AE1 /* UIView+Extensions.swift */,
+				7808B2B727DECBF300F58AE1 /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		78647C8B27D023820038BE42 = {
 			isa = PBXGroup;
 			children = (
+				7808B2A427DE16BC00F58AE1 /* R.generated.swift */,
 				78647C9627D023820038BE42 /* SevenWindsTest */,
 				78647C9527D023820038BE42 /* Products */,
 			);
@@ -84,11 +187,14 @@
 		78647C9627D023820038BE42 /* SevenWindsTest */ = {
 			isa = PBXGroup;
 			children = (
+				7808B2A727DE219300F58AE1 /* Extensions */,
+				7808B29A27DD98D800F58AE1 /* CustomViews */,
+				7808B28727DD77D400F58AE1 /* Entities */,
 				78B5006027D5622B002A25A9 /* Modules */,
 				78B5004F27D5562D002A25A9 /* Support Files */,
 				78B5004E27D5560F002A25A9 /* Services */,
 				7876717A27D0FD9800F6FDEB /* Networking */,
-				78647CA027D023860038BE42 /* Assets.xcassets */,
+				7808B29B27DD9C9800F58AE1 /* Resources */,
 				78647CA227D023860038BE42 /* LaunchScreen.storyboard */,
 				78647CA527D023860038BE42 /* Info.plist */,
 			);
@@ -99,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				7876717D27D0FE0900F6FDEB /* Core */,
+				7808B28227DD681200F58AE1 /* Endpoints */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -110,6 +217,7 @@
 				7876717B27D0FDCE00F6FDEB /* HTTP.swift */,
 				78B5005027D5579F002A25A9 /* NetworkRouter.swift */,
 				78B5006E27D6634B002A25A9 /* ParameterEncoder.swift */,
+				7808B28027DD16CB00F58AE1 /* ResponseDecoder.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -146,7 +254,6 @@
 		78B5006027D5622B002A25A9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				78B5006327D620E1002A25A9 /* VIPERProtocols.swift */,
 				78B5005627D55E7E002A25A9 /* Registration */,
 				78B5006727D63676002A25A9 /* Authorization */,
 			);
@@ -171,6 +278,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78647CA827D023860038BE42 /* Build configuration list for PBXNativeTarget "SevenWindsTest" */;
 			buildPhases = (
+				7808B2A027DE136E00F58AE1 /* R.swift */,
 				78647C9027D023820038BE42 /* Sources */,
 				78647C9127D023820038BE42 /* Frameworks */,
 				78647C9227D023820038BE42 /* Resources */,
@@ -182,6 +290,9 @@
 			name = SevenWindsTest;
 			packageProductDependencies = (
 				78B5005E27D56215002A25A9 /* SnapKit */,
+				7808B28F27DD81F900F58AE1 /* Kingfisher */,
+				7808B2A227DE154700F58AE1 /* Rswift */,
+				7808B2BB27DECE0500F58AE1 /* IQKeyboardManagerSwift */,
 			);
 			productName = SevenWindsTest;
 			productReference = 78647C9427D023820038BE42 /* SevenWindsTest.app */;
@@ -213,6 +324,9 @@
 			mainGroup = 78647C8B27D023820038BE42;
 			packageReferences = (
 				78B5005D27D56215002A25A9 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7808B28E27DD81F900F58AE1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7808B2A127DE154700F58AE1 /* XCRemoteSwiftPackageReference "R.swift" */,
+				7808B2BA27DECE0500F58AE1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 78647C9527D023820038BE42 /* Products */;
 			projectDirPath = "";
@@ -228,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7808B29D27DD9CCD00F58AE1 /* Colors.xcassets in Resources */,
 				78647CA427D023860038BE42 /* LaunchScreen.storyboard in Resources */,
 				78647CA127D023860038BE42 /* Assets.xcassets in Resources */,
 			);
@@ -235,28 +350,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7808B2A027DE136E00F58AE1 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(SRCROOT)/R.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rswift generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		78647C9027D023820038BE42 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7808B29927DD98D100F58AE1 /* MainButton.swift in Sources */,
 				78647C9827D023820038BE42 /* AppDelegate.swift in Sources */,
+				7808B2A927DE21B600F58AE1 /* UIStackView+Extensions.swift in Sources */,
 				78B5006627D63661002A25A9 /* AuthorizationRouter.swift in Sources */,
 				78B5006227D57811002A25A9 /* RegistrationPresenter.swift in Sources */,
 				78B5006F27D6634B002A25A9 /* ParameterEncoder.swift in Sources */,
 				78B5005827D55EA7002A25A9 /* RegistrationInteractor.swift in Sources */,
+				7808B2B827DECBF400F58AE1 /* UITextField+Extensions.swift in Sources */,
 				7876717C27D0FDCE00F6FDEB /* HTTP.swift in Sources */,
+				7808B29727DD84B500F58AE1 /* LocationsEndpoint.swift in Sources */,
+				7808B29427DD847200F58AE1 /* LocationsAPI.swift in Sources */,
 				7876717F27D0FFBD00F6FDEB /* Config.swift in Sources */,
+				7808B28427DD683400F58AE1 /* AuthorizationEndpoint.swift in Sources */,
+				7808B2B627DEB9E600F58AE1 /* UIView+Extensions.swift in Sources */,
+				7808B28627DD767900F58AE1 /* AuthorizationAPI.swift in Sources */,
+				7808B28127DD16CB00F58AE1 /* ResponseDecoder.swift in Sources */,
 				78B5005527D55E77002A25A9 /* RegistrationView.swift in Sources */,
-				78B5006427D620E1002A25A9 /* VIPERProtocols.swift in Sources */,
+				7808B2A527DE16BC00F58AE1 /* R.generated.swift in Sources */,
 				78B5006927D637EE002A25A9 /* AuthorizationInteractor.swift in Sources */,
+				7808B28B27DD7C5500F58AE1 /* Coffeehouse.swift in Sources */,
+				7808B28D27DD80FE00F58AE1 /* Product.swift in Sources */,
 				78647CAE27D02BD70038BE42 /* CurrentUserService.swift in Sources */,
 				78647C9A27D023820038BE42 /* SceneDelegate.swift in Sources */,
+				7808B28927DD780B00F58AE1 /* Token.swift in Sources */,
 				78647CB027D02C430038BE42 /* Endpoint.swift in Sources */,
 				78B5006B27D637FD002A25A9 /* AuthorizationPresenter.swift in Sources */,
 				78B5005127D5579F002A25A9 /* NetworkRouter.swift in Sources */,
+				7808B29F27DD9F7100F58AE1 /* MainTextField.swift in Sources */,
 				78B5006D27D63809002A25A9 /* AuthorizationView.swift in Sources */,
 				78B5005327D55E59002A25A9 /* RegistrationRouter.swift in Sources */,
+				7808B2B427DEADEF00F58AE1 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +621,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7808B28E27DD81F900F58AE1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		7808B2A127DE154700F58AE1 /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		7808B2BA27DECE0500F58AE1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		78B5005D27D56215002A25A9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -479,6 +656,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7808B28F27DD81F900F58AE1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7808B28E27DD81F900F58AE1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		7808B2A227DE154700F58AE1 /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7808B2A127DE154700F58AE1 /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+		7808B2BB27DECE0500F58AE1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7808B2BA27DECE0500F58AE1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		78B5005E27D56215002A25A9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 78B5005D27D56215002A25A9 /* XCRemoteSwiftPackageReference "SnapKit" */;

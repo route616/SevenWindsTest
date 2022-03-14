@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class RegistrationPresenter: RegistrationPresenterProtocol {
+final class RegistrationPresenter {
     
 }

@@ -1,0 +1,32 @@
+//
+//  LocationsEndpoint.swift
+//  SevenWindsTest
+//
+//  Created by Игорь on 13.03.2022.
+//
+
+import Foundation
+
+enum LocationsEndpoint {
+    case locations
+    case menu(id: Int)
+}
+
+extension LocationsEndpoint: Endpoint {
+    var path: String {
+        switch self {
+        case .locations:
+            return "locations"
+        case .menu(let id):
+            return "location/\(id)/menu"
+        }
+    }
+
+    var method: HTTPMethod { .get }
+
+    var task: HTTPTask {
+        .request
+    }
+
+    var headers: HTTPHeaders? { nil }
+}

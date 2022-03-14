@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class RegistrationInteractor: RegistrationInteractorProtocol {
+final class RegistrationInteractor {
     
 }

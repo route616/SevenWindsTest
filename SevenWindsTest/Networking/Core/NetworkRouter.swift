@@ -78,3 +78,8 @@ fileprivate extension URLRequest {
         }
     }
 }
+
+// MARK: - NetworkManager
+struct NetworkManager: ResponseDecoder {
+    private init() {}
+}
