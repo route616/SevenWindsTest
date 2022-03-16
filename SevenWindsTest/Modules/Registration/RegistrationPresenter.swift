@@ -8,5 +8,29 @@
 import Foundation
 
 final class RegistrationPresenter {
-    
+
+    // MARK: - Properties
+    weak var view: RegistrationViewInput?
+    var interactor: RegistrationInteractorInput?
+    var router: RegistrationRouterInput?
+}
+
+// MARK: - ViewOutput
+
+extension RegistrationPresenter: RegistrationViewOutput {
+    func didRegisterButtonTapped(with login: String?, password: String?, confirmPassword: String?) {
+        interactor?.registerNewUser(login, password: password, confirmPassword: confirmPassword)
+    }
+}
+
+// MARK: - InteractorOutput
+
+extension RegistrationPresenter: RegistrationInteractorOutput {
+    func didRegistrationSuccess() {
+        
+    }
+
+    func didRegistrationFailed(withError message: String) {
+        view?.showError(message)
+    }
 }

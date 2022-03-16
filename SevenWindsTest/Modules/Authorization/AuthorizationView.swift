@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+final class AuthorizationViewController: BaseViewController {
+
+}
+
+// MARK: - ViewInput
+
+extension AuthorizationViewController: AuthorizationViewInput {
+    
+}

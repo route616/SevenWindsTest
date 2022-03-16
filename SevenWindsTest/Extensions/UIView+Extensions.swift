@@ -14,4 +14,14 @@ extension UIView {
             addSubview(view)
         }
     }
+
+    func addShadow(color: UIColor = .black, offset: CGSize = .zero, radius: CGFloat = 5.0, opacity: Float = 0.5) {
+        layer.shadowColor = color.cgColor
+        layer.shadowOffset = offset
+        layer.shadowRadius = radius
+        layer.shadowOpacity = opacity
+        layer.masksToBounds = false
+        layer.shouldRasterize = true
+        layer.rasterizationScale = UIScreen.main.scale
+    }
 }

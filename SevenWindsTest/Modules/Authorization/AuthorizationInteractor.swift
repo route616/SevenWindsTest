@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+final class AuthorizationInteractor {
+
+}
+
+// MARK: - InteractorInput
+
+extension AuthorizationInteractor: AuthorizationInteractorInput {
+    
+}

@@ -6,3 +6,19 @@
 //
 
 import Foundation
+
+final class AuthorizationPresenter {
+    
+}
+
+// MARK: - ViewOutput
+
+extension AuthorizationPresenter: AuthorizationViewOutput {
+
+}
+
+// MARK: - InteractorOutput
+
+extension AuthorizationPresenter: AuthorizationInteractorOutput {
+
+}

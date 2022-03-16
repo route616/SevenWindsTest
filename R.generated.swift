@@ -105,7 +105,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 5 colors.
+  /// This `R.color` struct is generated, and contains static references to 7 colors.
   struct color {
     /// Color `Background`.
     static let background = Rswift.ColorResource(bundle: R.hostingBundle, name: "Background")
@@ -113,6 +113,10 @@ struct R: Rswift.Validatable {
     static let mainText = Rswift.ColorResource(bundle: R.hostingBundle, name: "MainText")
     /// Color `Main`.
     static let main = Rswift.ColorResource(bundle: R.hostingBundle, name: "Main")
+    /// Color `NavigationBackground`.
+    static let navigationBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "NavigationBackground")
+    /// Color `NavigationShadow`.
+    static let navigationShadow = Rswift.ColorResource(bundle: R.hostingBundle, name: "NavigationShadow")
     /// Color `SecondaryText`.
     static let secondaryText = Rswift.ColorResource(bundle: R.hostingBundle, name: "SecondaryText")
     /// Color `ThirdText`.
@@ -142,6 +146,24 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func mainText(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.mainText, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "NavigationBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func navigationBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.navigationBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "NavigationShadow", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func navigationShadow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.navigationShadow, compatibleWith: traitCollection)
     }
     #endif
 
@@ -184,6 +206,22 @@ struct R: Rswift.Validatable {
     @available(watchOSApplicationExtension 4.0, *)
     static func mainText(_: Void = ()) -> UIKit.UIColor? {
       return UIKit.UIColor(named: R.color.mainText.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "NavigationBackground", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func navigationBackground(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.navigationBackground.name)
+    }
+    #endif
+
+    #if os(watchOS)
+    /// `UIColor(named: "NavigationShadow", bundle: ..., traitCollection: ...)`
+    @available(watchOSApplicationExtension 4.0, *)
+    static func navigationShadow(_: Void = ()) -> UIKit.UIColor? {
+      return UIKit.UIColor(named: R.color.navigationShadow.name)
     }
     #endif
 

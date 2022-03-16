@@ -8,5 +8,8 @@
 import Foundation
 
 final class CurrentUserService {
+    static let shared = CurrentUserService()
+    private init() {}
     
+    var token: Token?
 }

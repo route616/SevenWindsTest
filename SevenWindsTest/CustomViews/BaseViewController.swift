@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupNavigationBar()
         view.setNeedsUpdateConstraints()
     }
 
@@ -22,8 +23,20 @@ class BaseViewController: UIViewController {
         super.updateViewConstraints()
     }
 
+    // MARK: - Abstract methods
+
     func setupView() {}
     func setupConstraints() {}
+
+    private func setupNavigationBar() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = R.color.navigationBackground()
+        appearance.titleTextAttributes = [.foregroundColor: R.color.mainText() ?? .black]
+        appearance.largeTitleTextAttributes = [.foregroundColor: R.color.mainText() ?? .black]
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+    }
 
     // MARK: - Alert mechanic
 

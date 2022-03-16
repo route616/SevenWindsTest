@@ -16,7 +16,10 @@ extension NetworkManager {
             password: String,
             completion: @escaping (Result<Token, DecoderError>) -> Void
         ) {
-            sendAuthorizationRequest(login: login, password: password, completion: completion)
+            router.request(.login(login, password: password)) { data, response, error in
+                let result = decode(data: data, response: response, error: error, type: Token.self)
+                completion(result)
+            }
         }
 
         static func register(
@@ -24,15 +27,7 @@ extension NetworkManager {
             password: String,
             completion: @escaping (Result<Token, DecoderError>) -> Void
         ) {
-            sendAuthorizationRequest(login: login, password: password, completion: completion)
-        }
-
-        private static func sendAuthorizationRequest(
-            login: String,
-            password: String,
-            completion: @escaping (Result<Token, DecoderError>) -> Void
-        ) {
-            router.request(.login(login, password: password)) { data, response, error in
+            router.request(.register(login: login, password: password)) { data, response, error in
                 let result = decode(data: data, response: response, error: error, type: Token.self)
                 completion(result)
             }

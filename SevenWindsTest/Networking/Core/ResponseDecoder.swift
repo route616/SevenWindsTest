@@ -21,9 +21,11 @@ public enum DecoderError: Error {
         case .missingData:
             return "Нет данных от сервера"
         case .serverError(let text):
-            return text
-        default:
-            return localizedDescription
+            return "Ошибка сервера: \(text)"
+        case .badResponse:
+            return "Неверный запрос"
+        case .decodingFailure:
+            return "Ошибка декодирования"
         }
     }
 }
@@ -48,7 +50,6 @@ extension ResponseDecoder {
     ) -> Result<T, DecoderError> {
         guard error == nil, let response = response as? HTTPURLResponse else { return .failure(.connectionRefused) }
         guard let data = data else { return .failure(.missingData) }
-        if let errorText = checkServerError(error: data) { return .failure(.serverError(text: errorText)) }
         guard (200...299).contains(response.statusCode) else { return .failure(.badResponse(code: response.statusCode)) }
         do {
             let decoder = JSONDecoder()
@@ -62,13 +63,7 @@ extension ResponseDecoder {
     static func decode(data: Data?, response: URLResponse?, error: Error?) -> Result<Void, DecoderError> {
         guard error == nil, let response = response as? HTTPURLResponse else { return .failure(.connectionRefused) }
         guard let data = data else { return .failure(.missingData) }
-        if let errorText = checkServerError(error: data) { return .failure(.serverError(text: errorText)) }
         guard (200...299).contains(response.statusCode) else { return .failure(.badResponse(code: response.statusCode)) }
         return .success(())
-    }
-
-    private static func checkServerError(error: Data) -> String? {
-        // TODO: Verify API
-        return nil
     }
 }
