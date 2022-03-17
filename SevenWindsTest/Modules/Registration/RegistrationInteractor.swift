@@ -17,7 +17,7 @@ final class RegistrationInteractor {
     
     private func isSamePasswords(_ password: String, _ confirmPassword: String) -> Bool { password == confirmPassword }
 
-    private func handle(error: DecoderError) {
+    private func generateErrorMessage(error: DecoderError) {
         var errorMessage: String
 
         switch error {
@@ -68,7 +68,7 @@ extension RegistrationInteractor: RegistrationInteractorInput {
                 CurrentUserService.shared.token = token
                 self?.presenter?.didRegistrationSuccess()
             case .failure(let error):
-                self?.handle(error: error)
+                self?.generateErrorMessage(error: error)
             }
         }
     }

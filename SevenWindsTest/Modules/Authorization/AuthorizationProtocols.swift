@@ -10,21 +10,22 @@ import Foundation
 // MARK: - View
 
 protocol AuthorizationViewInput: AnyObject {
-
+    func showError(_ message: String)
 }
 
 protocol AuthorizationViewOutput: AnyObject {
-
+    func didLoginButtonTapped(with login: String?, password: String?)
 }
 
 // MARK: - Interactor
 
 protocol AuthorizationInteractorInput: AnyObject {
-
+    func login(_ login: String?, password: String?)
 }
 
 protocol AuthorizationInteractorOutput: AnyObject {
-
+    func didAuthorizationSuccess()
+    func didAuthorizationFailed(withError message: String)
 }
 
 // MARK: - Router

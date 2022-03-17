@@ -46,6 +46,7 @@ class MainTextField: UIView {
         addSubviews(textField, titleLabel)
         titleLabel.snp.makeConstraints {
             $0.leading.trailing.top.equalToSuperview()
+            $0.height.equalTo(18.0)
             $0.bottom.equalTo(textField.snp.top).offset(-8.0)
         }
         textField.snp.makeConstraints {

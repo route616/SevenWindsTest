@@ -31,5 +31,5 @@ protocol RegistrationInteractorOutput: AnyObject {
 // MARK: - Router
 
 protocol RegistrationRouterInput: AnyObject {
-    
+
 }

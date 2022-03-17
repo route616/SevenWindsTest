@@ -31,4 +31,6 @@ final class RegistrationRouter {
     }
 
     // MARK: - Properties
+
+    weak var navigationController: UINavigationController?
 }

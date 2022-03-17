@@ -79,7 +79,6 @@ final class RegistrationViewController: BaseViewController {
         mainStackView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(18.0)
             $0.centerY.equalToSuperview()
-            $0.height.equalTo(267.0)
         }
         registerButton.snp.makeConstraints {
             $0.height.equalTo(47.0)
