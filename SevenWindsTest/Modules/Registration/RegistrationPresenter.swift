@@ -21,6 +21,10 @@ extension RegistrationPresenter: RegistrationViewOutput {
     func didRegisterButtonTapped(with login: String?, password: String?, confirmPassword: String?) {
         interactor?.registerNewUser(login, password: password, confirmPassword: confirmPassword)
     }
+
+    func didLoginButtonTapped() {
+        
+    }
 }
 
 // MARK: - InteractorOutput

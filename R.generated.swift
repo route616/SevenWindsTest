@@ -244,6 +244,48 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.image` struct is generated, and contains static references to 4 images.
+  struct image {
+    /// Image `collectionStyleMinus`.
+    static let collectionStyleMinus = Rswift.ImageResource(bundle: R.hostingBundle, name: "collectionStyleMinus")
+    /// Image `collectionStylePlus`.
+    static let collectionStylePlus = Rswift.ImageResource(bundle: R.hostingBundle, name: "collectionStylePlus")
+    /// Image `tableStyleMinus`.
+    static let tableStyleMinus = Rswift.ImageResource(bundle: R.hostingBundle, name: "tableStyleMinus")
+    /// Image `tableStylePlus`.
+    static let tableStylePlus = Rswift.ImageResource(bundle: R.hostingBundle, name: "tableStylePlus")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "collectionStyleMinus", bundle: ..., traitCollection: ...)`
+    static func collectionStyleMinus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.collectionStyleMinus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "collectionStylePlus", bundle: ..., traitCollection: ...)`
+    static func collectionStylePlus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.collectionStylePlus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tableStyleMinus", bundle: ..., traitCollection: ...)`
+    static func tableStyleMinus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tableStyleMinus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "tableStylePlus", bundle: ..., traitCollection: ...)`
+    static func tableStylePlus(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.tableStylePlus, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {

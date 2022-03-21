@@ -32,10 +32,17 @@
 		78647CA427D023860038BE42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78647CA227D023860038BE42 /* LaunchScreen.storyboard */; };
 		78647CAE27D02BD70038BE42 /* CurrentUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78647CAD27D02BD70038BE42 /* CurrentUserService.swift */; };
 		78647CB027D02C430038BE42 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78647CAF27D02C430038BE42 /* Endpoint.swift */; };
+		78762F6727E65C0800026F65 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78762F6627E65C0800026F65 /* Coordinate.swift */; };
 		7876717C27D0FDCE00F6FDEB /* HTTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876717B27D0FDCE00F6FDEB /* HTTP.swift */; };
 		7876717F27D0FFBD00F6FDEB /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7876717E27D0FFBD00F6FDEB /* Config.swift */; };
+		788D41B627E4D7F300C1755B /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D41B527E4D7F300C1755B /* MainTableViewCell.swift */; };
+		788D41B927E4ECB200C1755B /* MainTableViewCellProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D41B827E4ECB200C1755B /* MainTableViewCellProtocols.swift */; };
+		788D41BB27E4EE1C00C1755B /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788D41BA27E4EE1C00C1755B /* LocationService.swift */; };
 		78985DB227E2897F006621B8 /* RegistrationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78985DB127E2897F006621B8 /* RegistrationProtocols.swift */; };
 		78985DB427E29403006621B8 /* AuthorizationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78985DB327E29403006621B8 /* AuthorizationProtocols.swift */; };
+		789F217427E69DA300180CFB /* MenuProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F217327E69DA300180CFB /* MenuProtocols.swift */; };
+		789F217627E69E4300180CFB /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F217527E69E4300180CFB /* MenuView.swift */; };
+		789F217D27E7395D00180CFB /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F217C27E7395D00180CFB /* Counter.swift */; };
 		78B5005127D5579F002A25A9 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5005027D5579F002A25A9 /* NetworkRouter.swift */; };
 		78B5005327D55E59002A25A9 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5005227D55E59002A25A9 /* RegistrationRouter.swift */; };
 		78B5005527D55E77002A25A9 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5005427D55E77002A25A9 /* RegistrationView.swift */; };
@@ -47,6 +54,11 @@
 		78B5006B27D637FD002A25A9 /* AuthorizationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006A27D637FD002A25A9 /* AuthorizationPresenter.swift */; };
 		78B5006D27D63809002A25A9 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006C27D63809002A25A9 /* AuthorizationView.swift */; };
 		78B5006F27D6634B002A25A9 /* ParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B5006E27D6634B002A25A9 /* ParameterEncoder.swift */; };
+		78C6646827E3884E00F33F49 /* CoffeehousesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6646727E3884E00F33F49 /* CoffeehousesView.swift */; };
+		78C6646A27E3886400F33F49 /* CoffeehousesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6646927E3886400F33F49 /* CoffeehousesProtocols.swift */; };
+		78C6646C27E3898600F33F49 /* CoffeehousesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6646B27E3898600F33F49 /* CoffeehousesInteractor.swift */; };
+		78C6646E27E38A3D00F33F49 /* CoffeehousesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6646D27E38A3D00F33F49 /* CoffeehousesPresenter.swift */; };
+		78C6647027E38AA400F33F49 /* CoffeehousesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C6646F27E38AA400F33F49 /* CoffeehousesRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,10 +86,17 @@
 		78647CA527D023860038BE42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78647CAD27D02BD70038BE42 /* CurrentUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserService.swift; sourceTree = "<group>"; };
 		78647CAF27D02C430038BE42 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		78762F6627E65C0800026F65 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		7876717B27D0FDCE00F6FDEB /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		7876717E27D0FFBD00F6FDEB /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		788D41B527E4D7F300C1755B /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		788D41B827E4ECB200C1755B /* MainTableViewCellProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCellProtocols.swift; sourceTree = "<group>"; };
+		788D41BA27E4EE1C00C1755B /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		78985DB127E2897F006621B8 /* RegistrationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProtocols.swift; sourceTree = "<group>"; };
 		78985DB327E29403006621B8 /* AuthorizationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationProtocols.swift; sourceTree = "<group>"; };
+		789F217327E69DA300180CFB /* MenuProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuProtocols.swift; sourceTree = "<group>"; };
+		789F217527E69E4300180CFB /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		789F217C27E7395D00180CFB /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		78B5005027D5579F002A25A9 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		78B5005227D55E59002A25A9 /* RegistrationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		78B5005427D55E77002A25A9 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
@@ -88,6 +107,11 @@
 		78B5006A27D637FD002A25A9 /* AuthorizationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationPresenter.swift; sourceTree = "<group>"; };
 		78B5006C27D63809002A25A9 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		78B5006E27D6634B002A25A9 /* ParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoder.swift; sourceTree = "<group>"; };
+		78C6646727E3884E00F33F49 /* CoffeehousesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeehousesView.swift; sourceTree = "<group>"; };
+		78C6646927E3886400F33F49 /* CoffeehousesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeehousesProtocols.swift; sourceTree = "<group>"; };
+		78C6646B27E3898600F33F49 /* CoffeehousesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeehousesInteractor.swift; sourceTree = "<group>"; };
+		78C6646D27E38A3D00F33F49 /* CoffeehousesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeehousesPresenter.swift; sourceTree = "<group>"; };
+		78C6646F27E38AA400F33F49 /* CoffeehousesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeehousesRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +144,7 @@
 				7808B28827DD780B00F58AE1 /* Token.swift */,
 				7808B28A27DD7C5500F58AE1 /* Coffeehouse.swift */,
 				7808B28C27DD80FE00F58AE1 /* Product.swift */,
+				78762F6627E65C0800026F65 /* Coordinate.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -145,9 +170,11 @@
 		7808B29A27DD98D800F58AE1 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				7808B2B327DEADEF00F58AE1 /* BaseViewController.swift */,
 				7808B29827DD98D100F58AE1 /* MainButton.swift */,
 				7808B29E27DD9F7100F58AE1 /* MainTextField.swift */,
-				7808B2B327DEADEF00F58AE1 /* BaseViewController.swift */,
+				789F217C27E7395D00180CFB /* Counter.swift */,
+				789F217A27E736BA00180CFB /* MainTableViewCell */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -226,10 +253,29 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		789F217227E69D8000180CFB /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				789F217327E69DA300180CFB /* MenuProtocols.swift */,
+				789F217527E69E4300180CFB /* MenuView.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		789F217A27E736BA00180CFB /* MainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				788D41B527E4D7F300C1755B /* MainTableViewCell.swift */,
+				788D41B827E4ECB200C1755B /* MainTableViewCellProtocols.swift */,
+			);
+			path = MainTableViewCell;
+			sourceTree = "<group>";
+		};
 		78B5004E27D5560F002A25A9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				78647CAD27D02BD70038BE42 /* CurrentUserService.swift */,
+				788D41BA27E4EE1C00C1755B /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -261,6 +307,8 @@
 			children = (
 				78B5005627D55E7E002A25A9 /* Registration */,
 				78B5006727D63676002A25A9 /* Authorization */,
+				78C6646627E387C300F33F49 /* Coffeehouses */,
+				789F217227E69D8000180CFB /* Menu */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -275,6 +323,18 @@
 				78B5006527D63661002A25A9 /* AuthorizationRouter.swift */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		78C6646627E387C300F33F49 /* Coffeehouses */ = {
+			isa = PBXGroup;
+			children = (
+				78C6646927E3886400F33F49 /* CoffeehousesProtocols.swift */,
+				78C6646727E3884E00F33F49 /* CoffeehousesView.swift */,
+				78C6646B27E3898600F33F49 /* CoffeehousesInteractor.swift */,
+				78C6646D27E38A3D00F33F49 /* CoffeehousesPresenter.swift */,
+				78C6646F27E38AA400F33F49 /* CoffeehousesRouter.swift */,
+			);
+			path = Coffeehouses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,16 +449,20 @@
 				78647C9827D023820038BE42 /* AppDelegate.swift in Sources */,
 				7808B2A927DE21B600F58AE1 /* UIStackView+Extensions.swift in Sources */,
 				78B5006627D63661002A25A9 /* AuthorizationRouter.swift in Sources */,
+				789F217D27E7395D00180CFB /* Counter.swift in Sources */,
 				78B5006227D57811002A25A9 /* RegistrationPresenter.swift in Sources */,
+				788D41BB27E4EE1C00C1755B /* LocationService.swift in Sources */,
 				78B5006F27D6634B002A25A9 /* ParameterEncoder.swift in Sources */,
 				78B5005827D55EA7002A25A9 /* RegistrationInteractor.swift in Sources */,
 				7808B2B827DECBF400F58AE1 /* UITextField+Extensions.swift in Sources */,
 				7876717C27D0FDCE00F6FDEB /* HTTP.swift in Sources */,
+				78C6646C27E3898600F33F49 /* CoffeehousesInteractor.swift in Sources */,
 				7808B29727DD84B500F58AE1 /* LocationsEndpoint.swift in Sources */,
 				7808B29427DD847200F58AE1 /* LocationsAPI.swift in Sources */,
 				7876717F27D0FFBD00F6FDEB /* Config.swift in Sources */,
 				7808B28427DD683400F58AE1 /* AuthorizationEndpoint.swift in Sources */,
 				7808B2B627DEB9E600F58AE1 /* UIView+Extensions.swift in Sources */,
+				789F217427E69DA300180CFB /* MenuProtocols.swift in Sources */,
 				7808B28627DD767900F58AE1 /* AuthorizationAPI.swift in Sources */,
 				7808B28127DD16CB00F58AE1 /* ResponseDecoder.swift in Sources */,
 				78B5005527D55E77002A25A9 /* RegistrationView.swift in Sources */,
@@ -409,15 +473,23 @@
 				7808B28D27DD80FE00F58AE1 /* Product.swift in Sources */,
 				78647CAE27D02BD70038BE42 /* CurrentUserService.swift in Sources */,
 				78985DB227E2897F006621B8 /* RegistrationProtocols.swift in Sources */,
+				788D41B627E4D7F300C1755B /* MainTableViewCell.swift in Sources */,
 				78647C9A27D023820038BE42 /* SceneDelegate.swift in Sources */,
+				789F217627E69E4300180CFB /* MenuView.swift in Sources */,
 				7808B28927DD780B00F58AE1 /* Token.swift in Sources */,
 				78647CB027D02C430038BE42 /* Endpoint.swift in Sources */,
 				78B5006B27D637FD002A25A9 /* AuthorizationPresenter.swift in Sources */,
 				78B5005127D5579F002A25A9 /* NetworkRouter.swift in Sources */,
+				78762F6727E65C0800026F65 /* Coordinate.swift in Sources */,
+				78C6646827E3884E00F33F49 /* CoffeehousesView.swift in Sources */,
+				788D41B927E4ECB200C1755B /* MainTableViewCellProtocols.swift in Sources */,
+				78C6647027E38AA400F33F49 /* CoffeehousesRouter.swift in Sources */,
 				7808B29F27DD9F7100F58AE1 /* MainTextField.swift in Sources */,
+				78C6646E27E38A3D00F33F49 /* CoffeehousesPresenter.swift in Sources */,
 				78B5006D27D63809002A25A9 /* AuthorizationView.swift in Sources */,
 				78B5005327D55E59002A25A9 /* RegistrationRouter.swift in Sources */,
 				7808B2B427DEADEF00F58AE1 /* BaseViewController.swift in Sources */,
+				78C6646A27E3886400F33F49 /* CoffeehousesProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

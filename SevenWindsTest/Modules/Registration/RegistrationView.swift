@@ -37,17 +37,16 @@ final class RegistrationViewController: BaseViewController {
     }()
 
     private lazy var registerButton: MainButton = {
-        let view = MainButton()
+        let view = MainButton(type: .filled)
         view.setTitle("Регистрация", for: .normal)
         view.addTarget(self, action: #selector(registerButtonAction), for: .touchUpInside)
         return view
     }()
 
-    private lazy var registerButtonShadowView: UIView = {
-        let view = UIView()
-        view.backgroundColor = R.color.main()
-        view.layer.cornerRadius = 47.0 / 2.0
-        view.addShadow(offset: CGSize(width: 0.0, height: 2.0), radius: 4.0, opacity: 0.2)
+    private lazy var loginButton: MainButton = {
+        let view = MainButton(type: .outlined)
+        view.setTitle("Уже есть аккаунт?", for: .normal)
+        view.addTarget(self, action: #selector(loginButtonAction), for: .touchUpInside)
         return view
     }()
 
@@ -61,6 +60,16 @@ final class RegistrationViewController: BaseViewController {
         return view
     }()
 
+    private lazy var buttonStackView: UIStackView = {
+        let view = UIStackView()
+        view.addArrangedSubviews(registerButton, loginButton)
+        view.axis = .vertical
+        view.alignment = .fill
+        view.distribution = .equalSpacing
+        view.spacing = 8.0
+        return view
+    }()
+
     // MARK: - Properties
 
     var presenter: RegistrationViewOutput?
@@ -70,9 +79,7 @@ final class RegistrationViewController: BaseViewController {
     override func setupView() {
         navigationItem.title = "Регистрация"
         view.backgroundColor = R.color.background()
-        view.addSubview(mainStackView)
-        view.addSubview(registerButtonShadowView)
-        view.addSubview(registerButton)
+        view.addSubviews(mainStackView, buttonStackView)
     }
 
     override func setupConstraints() {
@@ -80,13 +87,18 @@ final class RegistrationViewController: BaseViewController {
             $0.leading.trailing.equalToSuperview().inset(18.0)
             $0.centerY.equalToSuperview()
         }
+
+        buttonStackView.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(18.0)
+            $0.top.equalTo(mainStackView.snp.bottom).offset(30.0)
+        }
+
         registerButton.snp.makeConstraints {
             $0.height.equalTo(47.0)
-            $0.top.equalTo(mainStackView.snp.bottom).offset(30.0)
-            $0.leading.trailing.equalToSuperview().inset(18.0)
         }
-        registerButtonShadowView.snp.makeConstraints {
-            $0.edges.equalTo(registerButton)
+
+        loginButton.snp.makeConstraints {
+            $0.height.equalTo(registerButton)
         }
     }
 
@@ -98,6 +110,10 @@ final class RegistrationViewController: BaseViewController {
             password: passwordTextView.text,
             confirmPassword: confirmPasswordTextView.text
         )
+    }
+
+    @objc private func loginButtonAction() {
+        presenter?.didLoginButtonTapped()
     }
 }
 

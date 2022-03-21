@@ -25,8 +25,11 @@ extension LocationsEndpoint: Endpoint {
     var method: HTTPMethod { .get }
 
     var task: HTTPTask {
-        .request
+        .requestWithParametersAndHeaders(nil, bodyParameters: nil, headers: headers)
     }
 
-    var headers: HTTPHeaders? { nil }
+    var headers: HTTPHeaders? {
+        guard let token = CurrentUserService.shared.token else { return [:] }
+        return ["Authoruzation": "Bearer \(token)"]
+    }
 }

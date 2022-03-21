@@ -15,6 +15,7 @@ protocol RegistrationViewInput: AnyObject {
 
 protocol RegistrationViewOutput: AnyObject {
     func didRegisterButtonTapped(with login: String?, password: String?, confirmPassword: String?)
+    func didLoginButtonTapped()
 }
 
 // MARK: - Interactor

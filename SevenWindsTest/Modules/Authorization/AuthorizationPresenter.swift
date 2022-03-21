@@ -22,6 +22,10 @@ extension AuthorizationPresenter: AuthorizationViewOutput {
     func didLoginButtonTapped(with login: String?, password: String?) {
         interactor?.login(login, password: password)
     }
+
+    func didRegisterButtonTapped() {
+        
+    }
 }
 
 // MARK: - InteractorOutput

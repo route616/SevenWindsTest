@@ -15,6 +15,7 @@ protocol AuthorizationViewInput: AnyObject {
 
 protocol AuthorizationViewOutput: AnyObject {
     func didLoginButtonTapped(with login: String?, password: String?)
+    func didRegisterButtonTapped()
 }
 
 // MARK: - Interactor
