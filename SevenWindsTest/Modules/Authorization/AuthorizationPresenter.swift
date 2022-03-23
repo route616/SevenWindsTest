@@ -25,6 +25,7 @@ extension AuthorizationPresenter: AuthorizationViewOutput {
 
     func didRegisterButtonTapped() {
         
+        // TODO: - router impl
     }
 }
 
@@ -33,6 +34,7 @@ extension AuthorizationPresenter: AuthorizationViewOutput {
 extension AuthorizationPresenter: AuthorizationInteractorOutput {
     func didAuthorizationSuccess() {
 
+        // TODO: - router impl
     }
 
     func didAuthorizationFailed(withError message: String) {

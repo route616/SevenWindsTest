@@ -31,6 +31,13 @@ final class CoffeehousesViewController: BaseViewController {
     var presenter: CoffeehousesViewOutput?
     var dataPresenter: CoffeehouseCellDataPresenter?
 
+    // MARK: - Lifecycle
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
+    }
+
     // MARK: - Setup UI
 
     override func setupView() {
@@ -50,11 +57,6 @@ final class CoffeehousesViewController: BaseViewController {
             $0.bottom.equalToSuperview().inset(32.0)
             $0.height.equalTo(47.0)
         }
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        presenter?.viewDidAppear()
     }
 
     // MARK: - Actions
@@ -98,7 +100,7 @@ extension CoffeehousesViewController: UITableViewDataSource {
         ) as? MainTableViewCell else {
             return UITableViewCell()
         }
-        dataPresenter?.configure(cell: cell, for: indexPath)
+        dataPresenter?.configure(cell, for: indexPath)
         return cell
     }
 }

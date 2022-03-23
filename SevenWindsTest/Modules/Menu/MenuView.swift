@@ -10,28 +10,90 @@ import UIKit
 
 final class MenuViewController: BaseViewController {
 
+    // MARK: - Views
+
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumInteritemSpacing = 0.0
+        layout.minimumLineSpacing = 0.0
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.register(MenuCollectionViewCell.self, forCellWithReuseIdentifier: MenuCollectionViewCell.identifier)
+        view.showsVerticalScrollIndicator = false
+        view.showsHorizontalScrollIndicator = false
+        view.delegate = self
+        view.dataSource = self
+        view.contentInset = UIEdgeInsets(top: 10.0, left: 9.0, bottom: 10.0, right: 9.0)
+        return view
+    }()
+
+    private lazy var orderButton: MainButton = {
+        let view = MainButton(type: .filled)
+        view.setTitle("Перейти к оплате", for: .normal)
+        view.addTarget(self, action: #selector(orderButtonAction), for: .touchUpInside)
+        return view
+    }()
+
+    // MARK: - Properties
+
+    var presenter: MenuViewOutput?
+    var dataPresenter: MenuCellDataPresenter?
+
+    // MARK: - Lifecycle
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidAppear()
+    }
+
+    // MARK: - Actions
+
+    @objc private func orderButtonAction() {
+        presenter?.didOrderButtonTapped()
+    }
 }
 
 // MARK: - MenuViewInput
 
 extension MenuViewController: MenuViewInput {
+    func update() {
+        collectionView.reloadData()
+    }
 
+    func showError(_ message: String) {
+        showErrorMessage(message)
+    }
 }
 
 // MARK: - UICollectionViewDelegate
 
 extension MenuViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? MenuCollectionViewCell else {
+            return
+        }
 
+        presenter?.didSelect(cell, at: indexPath)
+    }
 }
 
 // MARK: - UICollectionViewDataSource
 
 extension MenuViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
+        dataPresenter?.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: MenuCollectionViewCell.identifier,
+            for: indexPath
+        ) as? MenuCollectionViewCell else {
+            return UICollectionViewCell()
+        }
 
+        dataPresenter?.configure(cell, for: indexPath)
+
+        return cell
     }
 }

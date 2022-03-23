@@ -8,33 +8,34 @@
 import UIKit
 import SnapKit
 
-class MainTableViewCell: UITableViewCell {
+final class MainTableViewCell: UITableViewCell {
 
     // MARK: - Data types
 
     enum CellStyle {
-        case `default`
-        case withCounter
+        case forCoffeehouses
+        case forOrder
     }
 
     // MARK: - Views
 
-    private let roundedView: UIView = {
+    private lazy var roundedView: UIView = {
         let view = UIView()
         view.backgroundColor = R.color.secondaryText()
         view.layer.cornerRadius = 5.0
         return view
     }()
 
-    private let roundedShadowView: UIView = {
+    private lazy var roundedShadowView: UIView = {
         let view = UIView()
         view.backgroundColor = .black
         view.layer.cornerRadius = 5.0
         view.addShadow(offset: CGSize(width: 0.0, height: 2.0), radius: 2.0, opacity: 0.25)
+        view.layer.shouldRasterize = true
         return view
     }()
 
-    private let mainLabel: UILabel = {
+    private lazy var mainLabel: UILabel = {
         let view = UILabel()
         view.font = .systemFont(ofSize: 18.0, weight: .bold)
         view.textColor = R.color.mainText()
@@ -42,32 +43,36 @@ class MainTableViewCell: UITableViewCell {
         return view
     }()
 
-    private let secondaryLabel: UILabel = {
+    private lazy var secondaryLabel: UILabel = {
         let view = UILabel()
-        view.font = .systemFont(ofSize: 14.0, weight: .regular)
         view.textColor = R.color.thirdText()
         view.textAlignment = .left
         return view
     }()
 
     private lazy var counter: Counter = {
-        let view = Counter()
+        let view = Counter(with: .forTable)
+        view.delegate = self
         return view
     }()
 
     // MARK: - Properties
 
-    private var style: MainTableViewCell.CellStyle = .default {
+    private var style: CellStyle = .forCoffeehouses {
         didSet {
             switch style {
-            case .`default`:
+            case .forCoffeehouses:
                 counter.isHidden = true
-            case .withCounter:
+                secondaryLabel.font = .systemFont(ofSize: 14.0, weight: .regular)
+            case .forOrder:
                 counter.isHidden = false
+                secondaryLabel.font = .systemFont(ofSize: 16.0, weight: .medium)
             }
             layoutIfNeeded()
         }
     }
+
+    private var countHandler: ((UInt) -> Void)?
 
     // MARK: - Lifecycle
 
@@ -136,13 +141,26 @@ extension MainTableViewCell: MainTableViewCellInput {
     }
 
     var isCountable: Bool {
-        get { style == .withCounter }
+        get { style == .forOrder }
         set {
             if newValue {
-                style = .withCounter
+                style = .forOrder
             } else {
-                style = .default
+                style = .forCoffeehouses
             }
         }
+    }
+
+    var handler: ((UInt) -> Void)? {
+        get { countHandler }
+        set { countHandler = newValue }
+    }
+}
+
+// MARK: - CounterDelegate
+
+extension MainTableViewCell: CounterDelegate {
+    func didChanged(count: UInt) {
+        countHandler?(count)
     }
 }

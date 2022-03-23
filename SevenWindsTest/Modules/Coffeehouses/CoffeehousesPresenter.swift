@@ -13,6 +13,7 @@ final class CoffeehousesPresenter {
 
     weak var view: CoffeehousesViewInput?
     var interactor: CoffeehousesInteractorInput?
+    var router: CoffeehousesRouterInput?
 
     private var data = [Coffeehouse]()
 }
@@ -26,10 +27,12 @@ extension CoffeehousesPresenter: CoffeehousesViewOutput {
 
     func didOnMapButtonTapped() {
 
+        // TODO: - router impl
     }
 
     func didSelectRow(of indexPath: IndexPath) {
 
+        // TODO: - router impl
     }
 }
 
@@ -42,9 +45,7 @@ extension CoffeehousesPresenter: CoffeehousesInteractorOutput {
     }
 
     func didFetchFailed(withError message: String) {
-        if !message.isEmpty {
-            view?.showError(message)
-        }
+        view?.showError(message)
     }
 }
 
@@ -53,7 +54,7 @@ extension CoffeehousesPresenter: CoffeehousesInteractorOutput {
 extension CoffeehousesPresenter: CoffeehouseCellDataPresenter {
     var count: Int { data.count }
 
-    func configure(cell: MainTableViewCellInput, for indexPath: IndexPath) {
+    func configure(_ cell: MainTableViewCellInput, for indexPath: IndexPath) {
         var distance = LocationService.shared.calculateDistanceTo(point: data[indexPath.row].point)
         var measureUnit = LocationService.MeasureUnit.meters
 
@@ -66,5 +67,6 @@ extension CoffeehousesPresenter: CoffeehouseCellDataPresenter {
         cell.title = data[indexPath.row].name
         cell.subtitle = "\(distance) \(measureUnit.rawValue) от вас"
         cell.isCountable = false
+        cell.handler = nil
     }
 }

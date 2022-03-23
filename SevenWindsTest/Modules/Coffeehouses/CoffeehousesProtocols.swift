@@ -41,5 +41,5 @@ protocol CoffeehousesRouterInput: AnyObject {
 
 protocol CoffeehouseCellDataPresenter: AnyObject {
     var count: Int { get }
-    func configure(cell: MainTableViewCellInput, for indexPath: IndexPath)
+    func configure(_ cell: MainTableViewCellInput, for indexPath: IndexPath)
 }

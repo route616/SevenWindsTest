@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-protocol CounterDelegate {
+protocol CounterDelegate: AnyObject {
     func didChanged(count: UInt)
 }
 
@@ -57,6 +57,7 @@ class Counter: UIView {
             view.font = .systemFont(ofSize: 14.0, weight: .regular)
         }
         view.textColor = R.color.mainText()
+        view.text = "1"
         return view
     }()
 
@@ -80,7 +81,7 @@ class Counter: UIView {
         }
     }
 
-    var delegate: CounterDelegate?
+    weak var delegate: CounterDelegate?
 
     // MARK: - Lifecycle
 
@@ -117,9 +118,7 @@ class Counter: UIView {
     // MARK: - Logic
 
     @objc func minusButtonAction() {
-        if count > 1 {
-            count -= 1
-        }
+        count -= 1
         delegate?.didChanged(count: count)
     }
 

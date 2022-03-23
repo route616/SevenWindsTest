@@ -24,6 +24,7 @@ extension RegistrationPresenter: RegistrationViewOutput {
 
     func didLoginButtonTapped() {
         
+        // TODO: - router impl
     }
 }
 
@@ -32,6 +33,7 @@ extension RegistrationPresenter: RegistrationViewOutput {
 extension RegistrationPresenter: RegistrationInteractorOutput {
     func didRegistrationSuccess() {
         
+        // TODO: - router impl
     }
 
     func didRegistrationFailed(withError message: String) {
