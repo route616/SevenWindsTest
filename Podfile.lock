@@ -1,0 +1,46 @@
+PODS:
+  - IQKeyboardManagerSwift (6.5.10)
+  - R.swift (6.1.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - Realm (10.25.2):
+    - Realm/Headers (= 10.25.2)
+  - Realm/Headers (10.25.2)
+  - RealmSwift (10.25.2):
+    - Realm (= 10.25.2)
+  - SnapKit (5.6.0)
+  - YandexMapKit (3.5.0):
+    - YandexRuntime (= 3.5.0)
+  - YandexRuntime (3.5.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - R.swift
+  - RealmSwift
+  - SnapKit
+  - YandexMapKit
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManagerSwift
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - YandexMapKit
+    - YandexRuntime
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  R.swift: ec98ff71c4ab2f6fd01dd077e5afd15e63a4834c
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Realm: 978303663d0509166498f423d112e5ee97d4c91b
+  RealmSwift: a0c30c1efc49e928a0a6f8fb141bb2629616d79b
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  YandexMapKit: ecd4b78de34a35df63d066ac299e6fd0fe46d1ba
+  YandexRuntime: 2d55244d06267106cf9b00c25a1e63f72a73b6fd
+
+PODFILE CHECKSUM: cd32c59792117c973b0605890c62bc8bf2290bd8
+
+COCOAPODS: 1.11.3
